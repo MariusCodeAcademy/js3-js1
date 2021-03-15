@@ -50,3 +50,21 @@ if ((x % (z * -1)) === 0) {
 } else {
     console.log('lieka');
 }
+
+
+if ( 5 < 1) {
+    console.log('5 < 1');
+}
+
+let num1 = 0;
+
+// patikrinti ar num1 yra teigiamas ir ar maziau uz 60
+
+if (num1 > 0) {
+    // num1 yra daugiau  uz 0 teigiamas
+    console.log('teigiamas');
+} else if (num1 < 60) {
+    console.log('neigiamas ir maziau uz 60');
+} else {
+    console.log('nei teigiamas nei negiamas');
+}
