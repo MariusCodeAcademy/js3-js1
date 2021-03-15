@@ -32,6 +32,20 @@ console.log('g:', g, 'tipas:', typeof g );
 console.log('h:', h, 'tipas:', typeof h );
 console.log('hh:', hh, 'tipas:', typeof hh );
 
+console.clear()
+console.log('-- -- -- Boolean');
+// true arba false,  1 arba 0
+
+let dabarLyja = false; 
+let dabarPavasaris = Boolean(1);
+let arSiandienSauleta = Boolean('false')
+
+console.log('dabarLyja:', dabarLyja, 'tipas:', typeof dabarLyja);
+console.log('dabarPavasaris:', dabarPavasaris, 'tipas:', typeof dabarPavasaris);
+console.log('arSiandienSauleta:', arSiandienSauleta, 'tipas:', typeof arSiandienSauleta);
+
+
+
 
 
 
