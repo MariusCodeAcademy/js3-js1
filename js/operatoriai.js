@@ -44,6 +44,7 @@ let uzvakarTemp = '5';
 let vakarTemp = 5;
 let siandienTemp = 3;
 
+console.clear();
 console.log('-- Loginiai operatoriai');
 console.log('---- lygybes ir nelygybes, salyginiai palyginimai');
 console.log(
@@ -53,5 +54,40 @@ console.log(
     'vakarTemp:', vakarTemp,
     'siandienTemp:', siandienTemp
 );
-console.log('vakarTemp > siandienTemp; ', vakarTemp > siandienTemp);
+console.log('vakarTemp > siandienTemp; ', vakarTemp > siandienTemp); // ar uzvakar temp buvo didesne nei siandien
+console.log('vakarTemp < siandienTemp; ', vakarTemp < siandienTemp);
+console.log('vakarTemp >= siandienTemp; ', vakarTemp >= siandienTemp);
+console.log('vakarTemp <= siandienTemp; ', vakarTemp <= siandienTemp);
+// palyginimas 
+console.log('vakarTemp == siandienTemp; ', vakarTemp == siandienTemp);
+console.log('vakarTemp == uzvakarTemp; ', vakarTemp == uzvakarTemp);
+// == lygina bet netikrina tipo ir bando paversti tipus kad atlikti palyginima
+console.log('vakarTemp === uzvakarTemp; ', vakarTemp === uzvakarTemp);
+// === tikrina ir tipa ir reiksme ir tik jei abu sutampa grazina true
+
+// != !== ar nelygu 
+console.log('vakarTemp !== siandienTemp', vakarTemp !== siandienTemp);
+
+console.log('lijoUzvakar:', lijoUzvakar );
+console.log('!lijoUzvakar:', !lijoUzvakar ); // ! isvercia reiksme i priesinga
+
+
+
+// Sudetines salygos 
+console.clear();
+console.log('-- Sudetines salygos');
+console.log('---- AND operatorius, logine sandauga');
+
+console.log('true && true:', true && true);
+console.log('true && false:', true && false);
+console.log('false && false:', false && false);
+console.log('false && true:', false && true);
+
+console.log('---- OR operatorius, logine sudetis');
+console.log('true || true:', true || true);
+console.log('true || false:', true || false);
+console.log('false || false:', false || false);
+console.log('false || true:', false || true);
+
+
 
