@@ -82,3 +82,65 @@ function apskritimoPlotas(spindulys) {
     return Math.PI * (spindulys ** 2);
 }
 console.log(apskritimoPlotas(10));
+
+console.clear();
+
+function kambarioTuris(ilgis, plotis, aukstis) {
+    return ilgis * plotis * aukstis;
+}
+
+function kambarioSienuPlotas(ilgis, plotis, aukstis) {
+    // kambario sienu plotas yra perimetras padaugintas is auksio
+    let perimetras = (ilgis + plotis) * 2;
+    let sienuPlotas = perimetras * aukstis;
+    return sienuPlotas;
+}
+
+// not best use of variable and funcion names
+// function pl(x, y, a) {
+//     // kambario sienu plotas yra perimetras padaugintas is auksio
+//     let res = (x + y) * 2;
+//     let kaGrazinti = res * a;
+//     return kaGrazinti;
+// }
+
+
+let sienos = kambarioSienuPlotas(10, 10, 10);
+lg('sienos', sienos)
+
+sienos = kambarioSienuPlotas(5, 3, 2.8);
+lg('sienos', sienos)
+
+function kabarioLubosGrindys(ilgis, plotis) {
+ // ilgis x plotis   * 2
+ let grindys = ilgis * plotis;
+ return grindys * 2;
+}
+
+let lubosGrindys = kabarioLubosGrindys(5, 3);
+lg('lubosGrindys', lubosGrindys)
+
+
+
+// vienam rulone yra 10kv/m
+function kiekReiketuTapetuRulonuKambariui(ilgis, plotis, aukstis) {
+    const vienasRulonas = 10;
+    
+    // debugger
+    // gauti visus sienu ir lubu plota
+    let sienos = kambarioSienuPlotas(ilgis, plotis, aukstis);
+    let grindysLubos = kabarioLubosGrindys(ilgis, plotis);
+    // pagal gauta plota paskaiciuoti kiek rulonu reikes 
+    let kiekRulonu = (sienos + grindysLubos) / vienasRulonas;
+
+    return kiekRulonu;
+}
+
+let kiekRulonu = kiekReiketuTapetuRulonuKambariui(10, 5, 2.5);
+console.log('kiekRulonu', kiekRulonu);
+
+function kiekReiketuTapetuRulonuKambariuiAtmetusLangusDuris() {
+
+}
+
+// someFunction();
