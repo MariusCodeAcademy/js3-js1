@@ -83,6 +83,11 @@ const appDivas = document.getElementById('app');
 console.log(appDivas);
 
 appDivas.innerHTML = sarasas;
+// appDivas.innerHTML = {name: "bob"};
+
+
+
+
 
 
 
