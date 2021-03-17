@@ -21,6 +21,8 @@ let persons = [
   { name: "Jane", age: 25, town: "London", isStudent: false }, // 1
   { name: "James", age: 20, town: "Vilnius", isStudent: true }, // 2
   { name: "Mary", age: 21, town: "Tokyo", isStudent: true }, // 3
+  { name: "Gintaras", age: 26, town: "Vilnius", isStudent: false }, // 4
+  { name: "June", age: 19, town: "Tokyo", isStudent: true }, // 5
 ];
 
 console.log("pirmas objektas", persons[0]);
@@ -39,7 +41,15 @@ for (let i = 0; i < persons.length; i++) {
   }
 }
 
-// atspausdinti studentu vardus ir miestu kuriu amziu yra daugiau nei 22 metai
+// 1.atspausdinti studentu vardus ir miestus kuriu amziu yra daugiau nei 22 metai
+
+// 2. parasyti funkcija kuri grazina paduota masyva isrikiuota gal vardus
+
+// 3. parasyti funkcija kuri gazina tik studentus is vilniaus
+
+//3a. parasyti funkcija kuri gazina tik studentus is vilniaus ir jaunesni nei 23
+
+// 4. funkcija kuri grazina asmenu vardu ir metus kurie yra is Tokyo arba Londono;
 
 const blogs = [
   {
