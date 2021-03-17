@@ -8,6 +8,15 @@ console.log("numbers:", numbers);
 console.log("numbers2:", numbers2);
 
 // 1. Parašykite funkciją, kuri grąžina pirmą masyvo elementą.
+function getFirstEl() {
+  //   return numbers.shift();
+  return numbers[0];
+}
+
+let firstEl = getFirstEl();
+
+console.log("first el", firstEl);
+console.log("numbers:", numbers);
 
 // 2. Parašykite funkciją, kuri pašalina pirmą masyvo elementą ir jį grąžina.
 
