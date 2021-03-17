@@ -21,6 +21,7 @@ let numbers1 = [1, -43, -40, -14, -37, -8, 41, 27, -36, 36];
 
 // atspausdinti visus masyvo elementus
 function logArrayValues(masyvas) {
+  // debugger;
   for (let i = 0; i < masyvas.length; i++) {
     // atliekam ka reikia kiekvienam masyvo elementui
     // el reiksme yra numbers[i]
@@ -63,5 +64,30 @@ console.log("sum array", sumArray(numbers));
 console.log("sum array 1", sumArray(numbers1));
 
 // parasyti funkcija kuri grazina visu masyvo elem didesniu uz 13 sandauga
+function multiplyArrValues(masyvas) {
+  let total = 1;
+  for (let i = 0; i < masyvas.length; i++) {
+    // jei skaiciu daugiau uz 13 tai dauginam jei ne praleidziam
+    // if (masyvas[i] > 13) {
+    //   total *= masyvas[i];
+    // }
+    // continue iskarto pereina prie step dalies (i++);
+    if (masyvas[i] < 13) continue;
+    total *= masyvas[i];
+  }
+  return total;
+}
+console.log("multiply", multiplyArrValues(numbers));
 
 // parasyti funkcija kuri grazina masyvo elementu vidurki
+
+// pseudo codas leidzia mums suprasti ir susiskaidyti
+// problema ir tada lengviau ja isspresti
+
+// pseudo kodo pavyzdys:
+
+// 1. sukurti funkcija.
+// 2. funkcija paima masyva kaip argumenta
+// 3. f viduje mes turim susumuoti visus el
+// 4. padalinti suma is nariu skaiciau
+// 5. grazinti gauta rezultata
