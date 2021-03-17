@@ -64,6 +64,7 @@ console.log("sum array", sumArray(numbers));
 console.log("sum array 1", sumArray(numbers1));
 
 // parasyti funkcija kuri grazina visu masyvo elem didesniu uz 13 sandauga
+
 function multiplyArrValues(masyvas) {
   let total = 1;
   for (let i = 0; i < masyvas.length; i++) {
@@ -88,6 +89,20 @@ console.log("multiply", multiplyArrValues(numbers));
 
 // 1. sukurti funkcija.
 // 2. funkcija paima masyva kaip argumenta
-// 3. f viduje mes turim susumuoti visus el
-// 4. padalinti suma is nariu skaiciau
-// 5. grazinti gauta rezultata
+function getAverage(masyvas) {
+  // 3. f viduje mes turim susumuoti visus el
+  let total = 0;
+  // 3a. sukti cikla i sumuoti viska i total
+  for (let i = 0; i < masyvas.length; i++) {
+    total += masyvas[i];
+  }
+  console.log("total", total);
+  // 4. padalinti suma is nariu skaiciau
+  let average = total / masyvas.length;
+  // 5. grazinti gauta rezultata
+  return average;
+  // return total / masyvas.length;
+}
+
+// iskviesti funkcija
+console.log(getAverage(numbers));
