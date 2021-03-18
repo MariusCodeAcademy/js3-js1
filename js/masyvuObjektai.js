@@ -45,6 +45,15 @@ for (let i = 0; i < persons.length; i++) {
 
 // 2. parasyti funkcija kuri grazina paduota masyva isrikiuota gal vardus
 
+const colors = ["green", "red", "yellow", "blue"];
+
+function sortColors(arr) {
+  return arr.sort();
+}
+
+let sortedColors = sortColors(colors);
+console.log("sortedColors ", sortedColors);
+
 // 3. parasyti funkcija kuri gazina tik studentus is vilniaus
 
 //3a. parasyti funkcija kuri gazina tik studentus is vilniaus ir jaunesni nei 23

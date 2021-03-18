@@ -2,7 +2,7 @@ const peopleArray = [
   {
     name: "Serbentautas",
     surname: "Bordiūras",
-    age: 31,
+    age: "31 metai",
   },
   {
     name: "Monitorė",
