@@ -26,9 +26,51 @@ function giveMeAllLyginiai(arr) {
 }
 
 // iskviesti fn
-giveMeAllLyginiai(numbers1);
-giveMeAllLyginiai(numbers2);
+// giveMeAllLyginiai(numbers1);
+// giveMeAllLyginiai(numbers2);
 
 // 2. Parašykite funkciją, kuri iš masyvo atrenka (į naują masyvą) nelyginius skaičius
 
 // 3.  Parašykite funkciją, kuri sukuria ir grąžina naują masyvą, kurio elementai padauginti iš 2
+function multiplyArrByTwo(arr) {
+  // arr yra funkcijos vietinis kintamasis kurio reiksme bus paduota iskvietimo metu
+  let padaugintiIsDvieju = []; // jei reikia susumuoti arba grazinti string(eilute), arba nauja masyva. tai susikuriam tuscia kintamaji galutinei vertei issaugoti
+  for (let index = 0; index < arr.length; index++) {
+    // ciklas kuris sukasi ir ima kiekviena reiksme is masyvo
+    // visi reikalingi skaiciavimai ar kitos operacijos atliekamos cia {}
+    // reikme = arr[index]
+    // arr[index] * 2
+    padaugintiIsDvieju.push(arr[index] * 2);
+  }
+  return padaugintiIsDvieju; // grazinam galutinia reiksme;
+}
+
+let x2Arr = multiplyArrByTwo(numbers1);
+// console.log("x2Arr", x2Arr);
+
+let x2Arr2 = multiplyArrByTwo(numbers2);
+// console.log("x2Arr2", x2Arr2);
+
+// 4.  Parašykite funkciją, kuri sukuria ir grąžina naują masyvą, kurio elementai padauginti iš argumentu nurodyto skaičiaus;
+
+function multiplyArrByArg(arr, multiplyByHowMuch) {
+  // arr yra funkcijos vietinis kintamasis kurio reiksme bus paduota iskvietimo metu
+  let padaugintiIsArg = []; // jei reikia susumuoti arba grazinti string(eilute), arba nauja masyva. tai susikuriam tuscia kintamaji galutinei vertei issaugoti
+  for (let index = 0; index < arr.length; index++) {
+    // ciklas kuris sukasi ir ima kiekviena reiksme is masyvo
+    // visi reikalingi skaiciavimai ar kitos operacijos atliekamos cia {}
+    // reikme = arr[index]
+    // arr[index] * 2
+    padaugintiIsArg.push(arr[index] * multiplyByHowMuch);
+  }
+  console.log("padaugintiIsArg", padaugintiIsArg);
+
+  return padaugintiIsArg; // grazinam galutinia reiksme;
+}
+// prompt("iveskite slaptazodi");
+multiplyArrByArg(numbers1, 10);
+
+// let isKiek = prompt("is kiek padauginti");
+// multiplyArrByArg(numbers1, isKiek);
+
+// 6. Parašykite funkciją, kuri suskaičiuoja dvejetus masyve
