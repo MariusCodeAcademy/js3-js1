@@ -1,6 +1,6 @@
 "use strict";
 
-const numbers1 = [1, 2, -9, 8, 7, 9, 4, -5, 2, -6, -1, -8, 2, 4];
+const numbers1 = [1, 2, -9, 8, 2, 7, 9, 4, -5, 2, -6, -1, -8, 2, 4];
 const numbers2 = [-26, -13, -11, 5, 20, 49, 42, -13, -19, 48];
 
 console.log("Pradiniai duomenys");
@@ -69,8 +69,52 @@ function multiplyArrByArg(arr, multiplyByHowMuch) {
 }
 // prompt("iveskite slaptazodi");
 multiplyArrByArg(numbers1, 10);
+multiplyArrByArg(numbers2, 2);
 
 // let isKiek = prompt("is kiek padauginti");
 // multiplyArrByArg(numbers1, isKiek);
 
 // 6. Parašykite funkciją, kuri suskaičiuoja dvejetus masyve
+
+// [1, 2, -9, 8, 7, 9, 4, -5, 2, -6, -1, -8, 2, 4];
+function countMeTwos(masyvas) {
+  let dvejetuRadau = 0;
+  for (let index = 0; index < masyvas.length; index++) {
+    if (masyvas[index] === 2) {
+      // ka darau jei reiksme yra lygu du
+      dvejetuRadau = dvejetuRadau + 1;
+      // dvejetuRadau += 1;
+      // dvejetuRadau++;
+    }
+  }
+  console.log("-- dvejetu radau: ", dvejetuRadau);
+  return dvejetuRadau;
+}
+
+countMeTwos(numbers1);
+// let count = 0
+
+// kaskarta kai randam 2jeta padarom count++
+// el === 2 count = count + 1
+
+// grazinam skaitliuka
+
+// 7. Parašykite funkciją, kuri suskaičiuoja argumentu nurodyt≈o skaičiaus pasikartojimų skaičių masyve.
+
+// 8. parasyti funkcija kuri suranda dvejeto indexa masyve ir ji grazina
+// surade dvejeta nutraukti cikla.
+
+function firstIndexOfTwo(masyvas) {
+  const masyvoIlgis = masyvas.length;
+  for (let index = 0; index < masyvoIlgis; index++) {
+    if (masyvas[index] === 2) {
+      // radau dvejeta noriu grazinti index
+      console.log("index", index);
+      return index; // sustabdo esamos funkcijos vygdyma ir grazina reiksme
+    }
+  }
+}
+firstIndexOfTwo(numbers2);
+
+// 8. parasyti funkcija kuri suranda argumento indexa masyve ir ji grazina
+// surade dvejeta nutraukti cikla.

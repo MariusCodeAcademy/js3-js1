@@ -36,6 +36,8 @@ const peopleArray = [
   },
 ];
 
+["vardas pavarde", "bob jones"];
+
 // 1. Atspausdintikie consoleje visus vardus,
 // 2. sukurkite nauja masyva ir uzpildykite ji pavardemis,
 // 3. sukurkite funkcija, kuri prideda prie kiekvieno amziaus texta ' metai'
