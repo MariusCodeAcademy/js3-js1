@@ -57,6 +57,18 @@ function printIndexesPlease(arr) {
 //  [1] => reikšmė
 //  [2] => reikšmė
 //  ..............
+console.clear();
+
+function printMeIndexAndValues(arr) {
+  // prasukti cikla pro arr
+  for (let index = 0; index < arr.length; index++) {
+    // sujungi stringa pagal [0] => reikšmė
+    console.log(`[${index}] => ${arr[index]}`);
+  }
+}
+
+// console.log("----printMeIndexAndValues------");
+// printMeIndexAndValues(numbers);
 
 // 9. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reiksmes vienoje eilutėje:  -111 2 -9 48
 function printArrayValuesLine(arr) {
@@ -68,7 +80,7 @@ function printArrayValuesLine(arr) {
 
   console.log(arr.join(" "));
 }
-printArrayValuesLine(numbers);
+// printArrayValuesLine(numbers);
 
 // sukti cikla
 // kiekviena reiksme irasyti atskirta tarpu
@@ -76,5 +88,18 @@ printArrayValuesLine(numbers);
 
 // 10. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indekso ir reikšmių poras vienoje eilutėje, tokiu formatu:
 // [0]=>17 [1]=>8 [2]=>88 ...
+console.clear();
+function printMeIndexAndValuesInLine(arr) {
+  let resulRowString = "";
+  for (let index = 0; index < arr.length; index++) {
+    // console.log(`[${index}] => ${arr[index]}`);
+    resulRowString += `[${index}] => ${arr[index]} `;
+  } // for loop end
+
+  console.log(resulRowString);
+}
+// debugger;
+console.log("----printMeIndexAndValuesInLine------");
+printMeIndexAndValuesInLine(numbers);
 
 console.log("numbers after operation:", numbers);
