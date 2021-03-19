@@ -51,6 +51,11 @@ function userAgeResponces() {
 
   if (age < 3) {
     console.log("Nedek daiktu i burna");
+  } else if (age < 10) {
+    // 3 - 10
+    console.log("Nedek kreideliu i burna");
+  } else {
+    console.log("jusu amziu dar neaprasytas 10 150");
   }
 
   // jei amziu yra nuo 0 iki 3
