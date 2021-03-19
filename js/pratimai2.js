@@ -140,15 +140,26 @@ function findMeFIrstIndexOf(arr, whatToFind) {
   for (let index = 0; index < arrLength; index++) {
     if (arr[index] === whatToFind) {
       console.log("whatToFind index:", index);
-      return index;
+      return index; // isiminti index
     }
   }
+  // pasiziurim ar
 }
 findMeFIrstIndexOf(numbers1, -9);
 findMeFIrstIndexOf(numbers1, 2);
 findMeFIrstIndexOf(numbers1, 7);
 
 // 10. Parašykite funkciją, kuri grąžintu paskutinio surasto, argumentu nurodyto skaičiaus, indeksą masyve. Jei skaičius nerastas funkcija turi grąžinti -1.
+
+// sukam cikla per visas reiksmes
+
+// jei rasim ieskoma reiksme isiminsim index
+
+// ar radom reiksme
+
+// jei radom tai grazinam index
+
+// jei neradom grazinam -1
 
 // 11 pasinaudojant 10 pratimo funkcija parasyti salygini sakini suzinoti ar skaicius 2, 5, -9
 // yra numbers1 masyve ar ne
