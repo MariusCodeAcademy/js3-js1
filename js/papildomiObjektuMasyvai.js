@@ -62,6 +62,10 @@ prinMeNames(peopleArray);
 // 3. sukurkite funkcija, kuri prideda prie kiekvieno amziaus texta ' metai'
 
 // 4. sukurkite funkcija kuri ima peopleArray kaip argumenta ir grazina li elementus su 'vardas pavarde yra metai amziaus' reiksmemis
+// <li>Kestas paskestas 12</li>
+// <li>Maryte Greblyte 12</li>
+// atspausdinti consoleje
+// arba grazinti sujugta stringa
 
 // 5 . Atrinkite naują žmonių masyvą, kuriame būtų tik jaunesni nei 30 metų žmonės. Atspausdinkite.
 

@@ -18,7 +18,7 @@ function giveMeAllLyginiai(arr) {
   for (let index = 0; index < arr.length; index++) {
     // cia bus atliekama reikalinga procedura kiekvienm masyo el.
     if (arr[index] % 2 === 0) {
-      allEvenNumberFromArr.push(arr[index]);
+      allEvenNumberFromArr.push(arr[index]); // pridedam reiksme prie allEvenNumberFromArr
     }
   }
   console.log(allEvenNumberFromArr);
