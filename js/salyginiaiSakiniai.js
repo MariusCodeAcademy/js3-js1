@@ -54,6 +54,12 @@ function userAgeResponces() {
   } else if (age < 10) {
     // 3 - 10
     console.log("Nedek kreideliu i burna");
+  } else if (age < 20) {
+    console.log("Siulau lavinti save");
+  } else if (age < 30) {
+    console.log("Laikas subresti");
+  } else if (age < 60) {
+    console.log("Pasitikrinti sveikata");
   } else {
     console.log("jusu amziu dar neaprasytas 10 150");
   }
@@ -61,4 +67,57 @@ function userAgeResponces() {
   // jei amziu yra nuo 0 iki 3
   // atsakymas "nedek daiktu i burna"
 }
-userAgeResponces();
+// userAgeResponces();
+
+function kelintadienis() {
+  let day = 4;
+
+  if (day === 1) {
+    console.log("Pirmadienis");
+  } else if (day === 2) {
+    console.log("Antradienis");
+  } else if (day === 3) {
+    console.log("Treciadienis");
+  } else {
+    console.log("Kazkuri kita diena");
+  }
+}
+// kelintadienis();
+
+// Switch
+function kelintadienisSwitch(day) {
+  //   let day = 3;
+  // apriboti dienos skaiciu kad jis butu 1 iki 7 imtinai
+
+  if (day > 7) {
+    console.error("TOkios saivaites dienos nera");
+    return;
+  }
+
+  let kuriDiena;
+
+  switch (day) {
+    // day yra su kuo mes lyginam
+    // reiksme po case yra su kuo lyginam day
+    case 1:
+      kuriDiena = "Pirmadienis";
+      break;
+    case 2:
+      kuriDiena = "Antradienis";
+      break;
+    case 3:
+      kuriDiena = "Treciadienis";
+      break;
+    case 4:
+      kuriDiena = "Ketvirtadienis";
+      break;
+    case 5:
+      kuriDiena = "Penktadienis";
+      break;
+    default:
+      kuriDiena = "savaigalis";
+  }
+
+  console.log("Siandien yra :", kuriDiena);
+}
+kelintadienisSwitch(8);
