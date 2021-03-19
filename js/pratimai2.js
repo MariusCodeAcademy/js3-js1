@@ -152,8 +152,29 @@ findMeFIrstIndexOf(numbers1, 7);
 // 10. Parašykite funkciją, kuri grąžintu paskutinio surasto, argumentu nurodyto skaičiaus, indeksą masyve. Jei skaičius nerastas funkcija turi grąžinti -1.
 
 // sukam cikla per visas reiksmes
+function findMeLastIndexOf(arr, whatToFind) {
+  let indexThatWeFound = null;
+  const arrLength = arr.length;
+  for (let index = 0; index < arrLength; index++) {
+    // jei rasim ieskoma reiksme isiminsim index
+    if (arr[index] === whatToFind) {
+      // radom reiksme
+      indexThatWeFound = index;
+    }
+  }
+  console.log("indexThatWeFound:", indexThatWeFound);
 
-// jei rasim ieskoma reiksme isiminsim index
+  if (indexThatWeFound === null) {
+    return -1;
+  } else {
+    return indexThatWeFound;
+  }
+  // console.log("indexThatWeFound:", indexThatWeFound);
+  // return indexThatWeFound;
+}
+findMeLastIndexOf(numbers1, 2);
+findMeLastIndexOf(numbers1, -2342);
+findMeLastIndexOf(numbers1, -1);
 
 // ar radom reiksme
 
@@ -164,5 +185,21 @@ findMeFIrstIndexOf(numbers1, 7);
 // 11 pasinaudojant 10 pratimo funkcija parasyti salygini sakini suzinoti ar skaicius 2, 5, -9
 // yra numbers1 masyve ar ne
 
+//ar yra skaicius 2 numbers1 masyve
+if (findMeLastIndexOf(numbers1, 2) >= 0) {
+  console.log(`2 rastas ir jo index yra ${findMeLastIndexOf(numbers1, 2)}`);
+} else {
+  console.log("atsiprasome skaicius 2 nerasatas");
+}
 // jei radom skai tai atspausdini "2 rastas ir jo index yra xx"
 // jei neradom spausdinam "atsiprasome skaiciu 2 nerasatas";
+let arRadom5 = findMeLastIndexOf(numbers1, 5);
+if (arRadom5 >= 0) {
+  console.log(`5 rastas ir jo index yra ${arRadom5}`);
+} else {
+  console.log("atsiprasome skaicius 5 nerasatas");
+}
+
+function didWeFound(arr, whatNuberToFind) {}
+
+didWeFound(numbers2, 56);
