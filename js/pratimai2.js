@@ -68,8 +68,8 @@ function multiplyArrByArg(arr, multiplyByHowMuch) {
   return padaugintiIsArg; // grazinam galutinia reiksme;
 }
 // prompt("iveskite slaptazodi");
-multiplyArrByArg(numbers1, 10);
-multiplyArrByArg(numbers2, 2);
+// multiplyArrByArg(numbers1, 10);
+// multiplyArrByArg(numbers2, 2);
 
 // let isKiek = prompt("is kiek padauginti");
 // multiplyArrByArg(numbers1, isKiek);
@@ -91,7 +91,7 @@ function countMeTwos(masyvas) {
   return dvejetuRadau;
 }
 
-countMeTwos(numbers1);
+// countMeTwos(numbers1);
 // let count = 0
 
 // kaskarta kai randam 2jeta padarom count++
@@ -99,7 +99,23 @@ countMeTwos(numbers1);
 
 // grazinam skaitliuka
 
-// 7. Parašykite funkciją, kuri suskaičiuoja argumentu nurodyt≈o skaičiaus pasikartojimų skaičių masyve.
+// 7. Parašykite funkciją, kuri suskaičiuoja argumentu nurodyto skaičiaus pasikartojimų skaičių masyve.
+function countArgTimes(masyvas, kokioSkaiciauIeskom) {
+  let skaitliukas = 0;
+  for (let index = 0; index < masyvas.length; index++) {
+    if (masyvas[index] === kokioSkaiciauIeskom) {
+      skaitliukas++;
+    }
+  }
+  console.log(
+    `jus ieskojote skaiciaus ${kokioSkaiciauIeskom}. Radome ${skaitliukas} vnt`
+  );
+
+  return skaitliukas;
+}
+// countArgTimes(numbers1, 5);
+// countArgTimes(numbers1, -9);
+// countArgTimes(numbers1, 2);
 
 // 8. parasyti funkcija kuri suranda dvejeto indexa masyve ir ji grazina
 // surade dvejeta nutraukti cikla.
@@ -114,7 +130,28 @@ function firstIndexOfTwo(masyvas) {
     }
   }
 }
-firstIndexOfTwo(numbers2);
+// firstIndexOfTwo(numbers2);
 
-// 8. parasyti funkcija kuri suranda argumento indexa masyve ir ji grazina
-// surade dvejeta nutraukti cikla.
+// 9. parasyti funkcija kuri suranda argumento indexa masyve ir ji grazina
+// surade argumento nutraukti cikla.
+
+function findMeFIrstIndexOf(arr, whatToFind) {
+  const arrLength = arr.length;
+  for (let index = 0; index < arrLength; index++) {
+    if (arr[index] === whatToFind) {
+      console.log("whatToFind index:", index);
+      return index;
+    }
+  }
+}
+findMeFIrstIndexOf(numbers1, -9);
+findMeFIrstIndexOf(numbers1, 2);
+findMeFIrstIndexOf(numbers1, 7);
+
+// 10. Parašykite funkciją, kuri grąžintu paskutinio surasto, argumentu nurodyto skaičiaus, indeksą masyve. Jei skaičius nerastas funkcija turi grąžinti -1.
+
+// 11 pasinaudojant 10 pratimo funkcija parasyti salygini sakini suzinoti ar skaicius 2, 5, -9
+// yra numbers1 masyve ar ne
+
+// jei radom skai tai atspausdini "2 rastas ir jo index yra xx"
+// jei neradom spausdinam "atsiprasome skaiciu 2 nerasatas";
