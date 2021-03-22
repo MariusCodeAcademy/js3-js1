@@ -61,10 +61,26 @@ const people = [
 
 // 1. Parašykite funkciją, kuri atspausdina visus žmones eilutėmis
 // function expression budu pasiimti masyva kaip argumenta.
-console.log(people[0]);
+// console.log(people[0]);
+// console.log(people[1]);
+// console.log(people[2]);
+const printArr = function (arr) {
+  for (let index = 0; index < arr.length; index++) {
+    // visa kas cia parasyta bus kartojam tiek kartu kiek yra nariu arr masyve
+    console.log(arr[index]);
+  }
+};
+// printArr(people);
 
 // 2. Parašykite funkciją, kuri atspausdina visų žmonių vardus ir pavardes, atskirtus brūkšneliu, pvz.:
 // Serbentautas-Bordiūras
+const printNamesSurnames = function (arr) {
+  for (let idx = 0; idx < arr.length; idx++) {
+    // visa kas cia parasyta bus kartojam tiek kartu kiek yra nariu arr masyve
+    console.log(`${arr[idx].name}-${arr[idx].surname}`);
+  }
+};
+// printNamesSurnames(people);
 
 // 3. Parašykite funkciją, kuri atspausdina visų žmonių vardus ir pavardes bei santuokos statusą, tokiu būdu
 //  Jonas Bikas: Vedęs
@@ -72,8 +88,32 @@ console.log(people[0]);
 //  Samantas Kultaitytė: Ištekėjusi
 //  Samantas Kultaitytė: Neištekėjusi
 
+const printNameAndStatus = function (arr) {
+  let marrigeStatus;
+
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index].sex === "male") {
+      // vyras
+      marrigeStatus = arr[index].married ? "vedes" : "nevedes";
+    } else {
+      // moteris
+      marrigeStatus = arr[index].married ? "Ištekėjusi" : "Neištekėjusi";
+    }
+    // spausdinti rezultatus
+    console.log(`${arr[index].name} ${arr[index].surname}: ${marrigeStatus}`);
+  }
+};
+printNameAndStatus(people);
+
+// sukant cilka reikia:
+// pasitikrinti ar einamosio reiksmes zmogus yra vyras ar moteris
+
+// jeigu vyras ir reiksme vedes yra true tai "vardenis pavardenis: vedes";
+
+// jeigu moteris ir istekejus "vardene pavardene: istekejusi";
+
 // 4. Parašykite funkcijas pagal 2 ir 3 užduotį, kurios vietoj to kad spausdintų, rezultatus grąžintų.
-// Tuomet rezultatai būtų atspausdinti naudojant funkciją aprašytą pirmu punktu.
+// 4a.Tuomet rezultatai būtų atspausdinti naudojant funkciją aprašytą pirmu punktu.
 
 //
 //
@@ -84,7 +124,7 @@ console.log(people[0]);
 //
 //
 //
-// // funkcijos delclaracija
+// funkcijos delclaracija
 // function add5(value) {
 //   console.log(value + 5);
 // }
