@@ -58,6 +58,19 @@ const people = [
     hasCar: false,
   },
 ];
+// funkcijos delclaracija
+// function add5(value) {
+//   console.log(value + 5);
+// }
+
+// add5(10);
+
+// // function expression
+// const add10 = function (value) {
+//   console.log(value + 10);
+// };
+
+// add10(10);
 
 // 1. Parašykite funkciją, kuri atspausdina visus žmones eilutėmis
 // function expression budu pasiimti masyva kaip argumenta.
@@ -103,7 +116,7 @@ const printNameAndStatus = function (arr) {
     console.log(`${arr[index].name} ${arr[index].surname}: ${marrigeStatus}`);
   }
 };
-printNameAndStatus(people);
+// printNameAndStatus(people);
 
 // sukant cilka reikia:
 // pasitikrinti ar einamosio reiksmes zmogus yra vyras ar moteris
@@ -113,6 +126,45 @@ printNameAndStatus(people);
 // jeigu moteris ir istekejus "vardene pavardene: istekejusi";
 
 // 4. Parašykite funkcijas pagal 2 ir 3 užduotį, kurios vietoj to kad spausdintų, rezultatus grąžintų.
+
+const returnNamesSurnamesArray = function (arr) {
+  // kazkur padeti rezulta
+  const namesSurnamesArr = [];
+  for (let idx = 0; idx < arr.length; idx++) {
+    // visa kas cia parasyta bus kartojam tiek kartu kiek yra nariu arr masyve
+    //   console.log(`${arr[idx].name}-${arr[idx].surname}`);
+    namesSurnamesArr.push(`${arr[idx].name}-${arr[idx].surname}`);
+  }
+  return namesSurnamesArr;
+};
+let namesSurnames = returnNamesSurnamesArray(people);
+console.log("Vardai ir pavardes");
+printArr(namesSurnames);
+
+const returnNameAndStatusArr = function (arr) {
+  const namesAndStatuses = [];
+  let marrigeStatus;
+
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index].sex === "male") {
+      // vyras
+      marrigeStatus = arr[index].married ? "vedes" : "nevedes";
+    } else {
+      // moteris
+      marrigeStatus = arr[index].married ? "Ištekėjusi" : "Neištekėjusi";
+    }
+    // sudeti rezultatus i nauja masyva
+    namesAndStatuses.push(
+      `${arr[index].name} ${arr[index].surname}: ${marrigeStatus}`
+    );
+  }
+  return namesAndStatuses;
+};
+console.clear();
+let namesAndStatus = returnNameAndStatusArr(people);
+console.log("Vardai pavardes ir statusai");
+printArr(namesAndStatus);
+
 // 4a.Tuomet rezultatai būtų atspausdinti naudojant funkciją aprašytą pirmu punktu.
 
 //
@@ -124,16 +176,3 @@ printNameAndStatus(people);
 //
 //
 //
-// funkcijos delclaracija
-// function add5(value) {
-//   console.log(value + 5);
-// }
-
-// add5(10);
-
-// // function expression
-// const add10 = function (value) {
-//   console.log(value + 10);
-// };
-
-// add10(10);
