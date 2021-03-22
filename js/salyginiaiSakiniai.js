@@ -21,6 +21,7 @@ function userAgeResponces() {
   let age;
 
   age = prompt("Kiek jums metu?");
+
   //   debugger;
   age = Number(age);
   // patikrinti ar mes gaunam skaiciu? ar gaunam NaN
