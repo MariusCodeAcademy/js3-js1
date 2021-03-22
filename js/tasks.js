@@ -138,8 +138,8 @@ const returnNamesSurnamesArray = function (arr) {
   return namesSurnamesArr;
 };
 let namesSurnames = returnNamesSurnamesArray(people);
-console.log("Vardai ir pavardes");
-printArr(namesSurnames);
+// console.log("Vardai ir pavardes");
+// printArr(namesSurnames);
 
 const returnNameAndStatusArr = function (arr) {
   const namesAndStatuses = [];
@@ -160,10 +160,10 @@ const returnNameAndStatusArr = function (arr) {
   }
   return namesAndStatuses;
 };
-console.clear();
+// console.clear();
 let namesAndStatus = returnNameAndStatusArr(people);
-console.log("Vardai pavardes ir statusai");
-printArr(namesAndStatus);
+// console.log("Vardai pavardes ir statusai");
+// printArr(namesAndStatus);
 
 // 4a.Tuomet rezultatai būtų atspausdinti naudojant funkciją aprašytą pirmu punktu.
 
