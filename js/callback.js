@@ -1,6 +1,6 @@
 "use strict";
 console.log("callback.js");
-
+// debugger;
 // --------------- Parametru perduodamos funkcijos ----------------------------------- ------------------------
 /*
   Tai tokios funkcijos, kurioms per parametrą reikia perduoti funkciją. Dažniausiai ji vadinasi 'callback'. Tai labai dažna praktika JS kalboje
@@ -43,3 +43,32 @@ const returnMarrageStatus = function (person) {
       : "Neistekejusi"
   }`;
 };
+
+// panaudomis abi funkcijas grazinti reikmems
+console.log("Callback");
+
+const peaopleMarrageStatuses = mapArray(people, returnMarrageStatus);
+printArr(peaopleMarrageStatuses);
+
+// 6. Sukurkite kaitos funkciją, kuri grąžintų objektą su vardu, pavarde ir lytimi. Tuomet panaudoje ją, suformuokite masyvą,
+// naudojant funkciją 'mapArray'. Rezultatą atspausdinkite naudodami funkciją 'printArray';
+
+/**
+ * Si funkcija grazina varda pavarde ir lyti is person objekto
+ *
+ * @param {object} person
+ *
+ * @return {object} - naujas objektas su vardu pavarde ir lytimi
+ */
+const returnPersonInfo = function (person) {
+  //   debugger;
+  return {
+    name: person.name,
+    surname: person.surname,
+    sex: person.sex,
+  };
+};
+console.clear();
+const res = mapArray(people, returnPersonInfo);
+printArr(res);
+console.log(res);
